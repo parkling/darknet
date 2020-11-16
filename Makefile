@@ -10,6 +10,11 @@ ARCH= -gencode arch=compute_30,code=sm_30 \
       -gencode arch=compute_52,code=[sm_52,compute_52]
 #      -gencode arch=compute_20,code=[sm_20,sm_21] \ This one is deprecated?
 
+# correct for 2080 ti from https://github.com/AlexeyAB/darknet/blob/master/Makefile
+ARCH= -gencode arch=compute_75,code=[sm_75,compute_75]
+# for 1080 ti hal3
+# GTX 1080, GTX 1070, GTX 1060, GTX 1050, GTX 1030, Titan Xp, Tesla P40, Tesla P4
+# ARCH= -gencode arch=compute_61,code=sm_61 -gencode arch=compute_61,code=compute_61
 # This is what I use, uncomment if you know your arch and want to specify
 # ARCH= -gencode arch=compute_52,code=compute_52
 
